@@ -1,0 +1,40 @@
+{
+  "message": "accurate",
+  "cod": "200",
+  "count": 1,
+  "list": [
+    {
+      "id": 5020938,
+      "name": "Chaska",
+      "coord": {
+        "lat": 44.7894,
+        "lon": -93.6022
+      },
+      "main": {
+        "temp": 274.36,
+        "feels_like": 272.03,
+        "temp_min": 272.58,
+        "temp_max": 275.79,
+        "pressure": 1021,
+        "humidity": 76
+      },
+      "dt": 1647306559,
+      "wind": {
+        "speed": 2.06,
+        "deg": 360
+      },
+      "sys": { "country": "US" },
+      "rain": null,
+      "snow": null,
+      "clouds": { "all": 0 },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01n"
+        }
+      ]
+    }
+  ]
+}
