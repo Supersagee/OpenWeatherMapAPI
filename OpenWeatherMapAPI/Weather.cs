@@ -26,7 +26,7 @@ namespace OpenWeatherMapAPI
 
             var currentTemp = ((dynamic)JObject.Parse(weather)).list[0].main.temp;
 
-            return currentTemp;
+            return Math.Round(Convert.ToDouble(currentTemp));
         }
 
         public object HighTemp()
@@ -35,7 +35,7 @@ namespace OpenWeatherMapAPI
 
             var highTemp = ((dynamic)JObject.Parse(weather)).list[0].main.temp_max;
 
-            return highTemp;
+            return Math.Round(Convert.ToDouble(highTemp));
         }
 
         public object LowTemp()
@@ -44,7 +44,7 @@ namespace OpenWeatherMapAPI
 
             var lowTemp = ((dynamic)JObject.Parse(weather)).list[0].main.temp_min;
 
-            return lowTemp;
+            return Math.Round(Convert.ToDouble(lowTemp));
         }
 
         public object CurrentConditions()
