@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a1a8d511-0c6c-4dfa-afe9-c98f652b299d": {
+      "ProjectGuid": "a1a8d511-0c6c-4dfa-afe9-c98f652b299d",
+      "DisplayName": "OpenWeatherMapAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
