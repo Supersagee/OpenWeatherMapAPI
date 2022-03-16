@@ -17,15 +17,48 @@ namespace OpenWeatherMapAPI
             _client = client;
         }
 
-        public string CurrentWeather()
+        public object CurrentTemp()
         {
             var weatherURL = "https://api.openweathermap.org/data/2.5/find?q=Chaska&units=imperial&appid=c6a5411956e8b651b9d50e35410b9b06";
 
             var weather = _client.GetStringAsync(weatherURL).Result;
 
-            var weatherReturn = JObject.Parse(weather).GetValue("list[1]").ToString();
+            var currentTemp = ((dynamic)JObject.Parse(weather)).list[0].main.temp;
 
-            return weatherReturn;
+            return currentTemp;
+        }
+
+        public object HighTemp()
+        {
+            var weatherURL = "https://api.openweathermap.org/data/2.5/find?q=Chaska&units=imperial&appid=c6a5411956e8b651b9d50e35410b9b06";
+
+            var weather = _client.GetStringAsync(weatherURL).Result;
+
+            var highTemp = ((dynamic)JObject.Parse(weather)).list[0].main.temp_max;
+
+            return highTemp;
+        }
+
+        public object LowTemp()
+        {
+            var weatherURL = "https://api.openweathermap.org/data/2.5/find?q=Chaska&units=imperial&appid=c6a5411956e8b651b9d50e35410b9b06";
+
+            var weather = _client.GetStringAsync(weatherURL).Result;
+
+            var lowTemp = ((dynamic)JObject.Parse(weather)).list[0].main.temp_min;
+
+            return lowTemp;
+        }
+
+        public object CurrentConditions()
+        {
+            var weatherURL = "https://api.openweathermap.org/data/2.5/find?q=Chaska&units=imperial&appid=c6a5411956e8b651b9d50e35410b9b06";
+
+            var weather = _client.GetStringAsync(weatherURL).Result;
+
+            var currentConditions = ((dynamic)JObject.Parse(weather)).list[0].weather[0].description;
+
+            return currentConditions;
         }
     }
 }
